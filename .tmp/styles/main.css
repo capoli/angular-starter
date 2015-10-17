@@ -36,7 +36,12 @@ html {
 
 .footer .container {
     background: rgba(0, 0, 0, 0.4);
-    padding-top: 6px;
+    padding-top: 4px;
+}
+
+.footer .container .text-muted {
+    color: rgba(255, 140, 25, 0.51);
+    text-align: right;
 }
 
 .alert {
