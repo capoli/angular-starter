@@ -19,6 +19,7 @@ html {
     margin-bottom: 2em;
     min-height: 100%;
     overflow: auto;
+    padding: 2em 2em 0 2em;
 }
 
 .footer {
