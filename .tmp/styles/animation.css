@@ -1,0 +1,114 @@
+/*
+    fade in/out animation -- begin
+*/
+.fade {
+    position: absolute;
+    top: 71px;
+    left: 0;
+    right: 0;
+    height: 100%;
+    opacity: 1;
+}
+.fade.ng-enter,
+.fade.ng-leave {
+    transition: all 1s ease;
+}
+.fade.ng-enter {
+    opacity: 0;
+}
+.fade.ng-enter-active {
+    opacity: 1;
+}
+.fade.ng-leave {
+    opacity: 1;
+}
+.fade.ng-leave-active {
+    opacity: 0;
+}
+/*
+    fade in/out animation -- end
+*/
+
+/*
+    pop in/out animation -- begin
+*/
+.pop {
+    position: absolute;
+    top: 71px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.pop.ng-enter,
+.pop.ng-leave {
+    transition: all 1s ease;
+}
+.pop.ng-enter {
+    transform: scale(0);
+}
+.pop.ng-enter-active,
+.pop.ng-leave,
+.pop.ng-leave-active {
+    transform: scale(1);
+}
+.pop.ng-leave-active {}
+/*
+    pop in/out animation -- end
+*/
+/*
+    slidedown animation --- begin
+*/
+.slidedown {
+    position: absolute;
+    top: 71px;
+    left: 12.5%;
+    width: 75%;
+    height: 100%;
+}
+.slidedown.ng-enter,
+.slidedown.ng-leave {
+    transition: all 1s ease;
+}
+.slidedown.ng-enter {
+    top: -100%;
+}
+.slidedown.ng-enter-active {
+    top: 71px;
+}
+.slidedown.ng-leave {
+    top: 71px;
+}
+.slidedown.ng-leave-active {
+    top: 100%;
+}
+/*
+    slidedown animation --- end
+*/
+
+/*
+    scale animation --- start
+*/
+.animate-enter,
+.animate-leave {
+    transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    position: relative;
+    display: block;
+}
+
+.animate-leave.animate-leave-active,
+.animate-enter {
+    transform: scaleY(0);
+    height: 0px;
+    opacity: 0;
+}
+
+.animate-enter.animate-enter-active,
+.animate-leave {
+    transform: scaleY(1);
+    height: 30px;
+    opacity: 1;
+}
+/*
+    scale animation --- end
+*/
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFuaW1hdGlvbi5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0VBRUU7QUFDRjtJQUNJLG1CQUFtQjtJQUNuQixVQUFVO0lBQ1YsUUFBUTtJQUNSLFNBQVM7SUFDVCxhQUFhO0lBQ2IsV0FBVztDQUNkO0FBQ0Q7O0lBR0ksd0JBQXdCO0NBQzNCO0FBQ0Q7SUFDSSxXQUFXO0NBQ2Q7QUFDRDtJQUNJLFdBQVc7Q0FDZDtBQUNEO0lBQ0ksV0FBVztDQUNkO0FBQ0Q7SUFDSSxXQUFXO0NBQ2Q7QUFDRDs7RUFFRTs7QUFFRjs7RUFFRTtBQUNGO0lBQ0ksbUJBQW1CO0lBQ25CLFVBQVU7SUFDVixRQUFRO0lBQ1IsU0FBUztJQUNULFVBQVU7Q0FDYjtBQUNEOztJQUdJLHdCQUF3QjtDQUMzQjtBQUNEO0lBRUksb0JBQW9CO0NBQ3ZCO0FBQ0Q7OztJQUlJLG9CQUFvQjtDQUN2QjtBQUNELHVCQUF1QjtBQUN2Qjs7RUFFRTtBQUNGOztFQUVFO0FBQ0Y7SUFDSSxtQkFBbUI7SUFDbkIsVUFBVTtJQUNWLFlBQVk7SUFDWixXQUFXO0lBQ1gsYUFBYTtDQUNoQjtBQUNEOztJQUdJLHdCQUF3QjtDQUMzQjtBQUNEO0lBQ0ksV0FBVztDQUNkO0FBQ0Q7SUFDSSxVQUFVO0NBQ2I7QUFDRDtJQUNJLFVBQVU7Q0FDYjtBQUNEO0lBQ0ksVUFBVTtDQUNiO0FBQ0Q7O0VBRUU7O0FBRUY7O0VBRUU7QUFDRjs7SUFNSSwrREFBK0Q7SUFDL0QsbUJBQW1CO0lBQ25CLGVBQWU7Q0FDbEI7O0FBRUQ7O0lBTUkscUJBQXFCO0lBQ3JCLFlBQVk7SUFDWixXQUFXO0NBQ2Q7O0FBRUQ7O0lBTUkscUJBQXFCO0lBQ3JCLGFBQWE7SUFDYixXQUFXO0NBQ2Q7QUFDRDs7RUFFRSIsImZpbGUiOiJhbmltYXRpb24uY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLypcbiAgICBmYWRlIGluL291dCBhbmltYXRpb24gLS0gYmVnaW5cbiovXG4uZmFkZSB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHRvcDogNzFweDtcbiAgICBsZWZ0OiAwO1xuICAgIHJpZ2h0OiAwO1xuICAgIGhlaWdodDogMTAwJTtcbiAgICBvcGFjaXR5OiAxO1xufVxuLmZhZGUubmctZW50ZXIsXG4uZmFkZS5uZy1sZWF2ZSB7XG4gICAgLXdlYmtpdC10cmFuc2l0aW9uOiBhbGwgMXMgZWFzZTtcbiAgICB0cmFuc2l0aW9uOiBhbGwgMXMgZWFzZTtcbn1cbi5mYWRlLm5nLWVudGVyIHtcbiAgICBvcGFjaXR5OiAwO1xufVxuLmZhZGUubmctZW50ZXItYWN0aXZlIHtcbiAgICBvcGFjaXR5OiAxO1xufVxuLmZhZGUubmctbGVhdmUge1xuICAgIG9wYWNpdHk6IDE7XG59XG4uZmFkZS5uZy1sZWF2ZS1hY3RpdmUge1xuICAgIG9wYWNpdHk6IDA7XG59XG4vKlxuICAgIGZhZGUgaW4vb3V0IGFuaW1hdGlvbiAtLSBlbmRcbiovXG5cbi8qXG4gICAgcG9wIGluL291dCBhbmltYXRpb24gLS0gYmVnaW5cbiovXG4ucG9wIHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiA3MXB4O1xuICAgIGxlZnQ6IDA7XG4gICAgcmlnaHQ6IDA7XG4gICAgYm90dG9tOiAwO1xufVxuLnBvcC5uZy1lbnRlcixcbi5wb3AubmctbGVhdmUge1xuICAgIC13ZWJraXQtdHJhbnNpdGlvbjogYWxsIDFzIGVhc2U7XG4gICAgdHJhbnNpdGlvbjogYWxsIDFzIGVhc2U7XG59XG4ucG9wLm5nLWVudGVyIHtcbiAgICAtd2Via2l0LXRyYW5zZm9ybTogc2NhbGUoMCk7XG4gICAgdHJhbnNmb3JtOiBzY2FsZSgwKTtcbn1cbi5wb3AubmctZW50ZXItYWN0aXZlLFxuLnBvcC5uZy1sZWF2ZSxcbi5wb3AubmctbGVhdmUtYWN0aXZlIHtcbiAgICAtd2Via2l0LXRyYW5zZm9ybTogc2NhbGUoMSk7XG4gICAgdHJhbnNmb3JtOiBzY2FsZSgxKTtcbn1cbi5wb3AubmctbGVhdmUtYWN0aXZlIHt9XG4vKlxuICAgIHBvcCBpbi9vdXQgYW5pbWF0aW9uIC0tIGVuZFxuKi9cbi8qXG4gICAgc2xpZGVkb3duIGFuaW1hdGlvbiAtLS0gYmVnaW5cbiovXG4uc2xpZGVkb3duIHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiA3MXB4O1xuICAgIGxlZnQ6IDEyLjUlO1xuICAgIHdpZHRoOiA3NSU7XG4gICAgaGVpZ2h0OiAxMDAlO1xufVxuLnNsaWRlZG93bi5uZy1lbnRlcixcbi5zbGlkZWRvd24ubmctbGVhdmUge1xuICAgIC13ZWJraXQtdHJhbnNpdGlvbjogYWxsIDFzIGVhc2U7XG4gICAgdHJhbnNpdGlvbjogYWxsIDFzIGVhc2U7XG59XG4uc2xpZGVkb3duLm5nLWVudGVyIHtcbiAgICB0b3A6IC0xMDAlO1xufVxuLnNsaWRlZG93bi5uZy1lbnRlci1hY3RpdmUge1xuICAgIHRvcDogNzFweDtcbn1cbi5zbGlkZWRvd24ubmctbGVhdmUge1xuICAgIHRvcDogNzFweDtcbn1cbi5zbGlkZWRvd24ubmctbGVhdmUtYWN0aXZlIHtcbiAgICB0b3A6IDEwMCU7XG59XG4vKlxuICAgIHNsaWRlZG93biBhbmltYXRpb24gLS0tIGVuZFxuKi9cblxuLypcbiAgICBzY2FsZSBhbmltYXRpb24gLS0tIHN0YXJ0XG4qL1xuLmFuaW1hdGUtZW50ZXIsXG4uYW5pbWF0ZS1sZWF2ZSB7XG4gICAgLXdlYmtpdC10cmFuc2l0aW9uOiA0MDBtcyBjdWJpYy1iZXppZXIoMC4yNTAsIDAuMjUwLCAwLjc1MCwgMC43NTApIGFsbDtcbiAgICAtbW96LXRyYW5zaXRpb246IDQwMG1zIGN1YmljLWJlemllcigwLjI1MCwgMC4yNTAsIDAuNzUwLCAwLjc1MCkgYWxsO1xuICAgIC1tcy10cmFuc2l0aW9uOiA0MDBtcyBjdWJpYy1iZXppZXIoMC4yNTAsIDAuMjUwLCAwLjc1MCwgMC43NTApIGFsbDtcbiAgICAtby10cmFuc2l0aW9uOiA0MDBtcyBjdWJpYy1iZXppZXIoMC4yNTAsIDAuMjUwLCAwLjc1MCwgMC43NTApIGFsbDtcbiAgICB0cmFuc2l0aW9uOiA0MDBtcyBjdWJpYy1iZXppZXIoMC4yNTAsIDAuMjUwLCAwLjc1MCwgMC43NTApIGFsbDtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgZGlzcGxheTogYmxvY2s7XG59XG5cbi5hbmltYXRlLWxlYXZlLmFuaW1hdGUtbGVhdmUtYWN0aXZlLFxuLmFuaW1hdGUtZW50ZXIge1xuICAgIC13ZWJraXQtdHJhbnNmb3JtOiBzY2FsZVkoMCk7XG4gICAgLW1vei10cmFuc2Zvcm06IHNjYWxlWSgwKTtcbiAgICAtbXMtdHJhbnNmb3JtOiBzY2FsZVkoMCk7XG4gICAgLW8tdHJhbnNmb3JtOiBzY2FsZVkoMCk7XG4gICAgdHJhbnNmb3JtOiBzY2FsZVkoMCk7XG4gICAgaGVpZ2h0OiAwcHg7XG4gICAgb3BhY2l0eTogMDtcbn1cblxuLmFuaW1hdGUtZW50ZXIuYW5pbWF0ZS1lbnRlci1hY3RpdmUsXG4uYW5pbWF0ZS1sZWF2ZSB7XG4gICAgLXdlYmtpdC10cmFuc2Zvcm06IHNjYWxlWSgxKTtcbiAgICAtbW96LXRyYW5zZm9ybTogc2NhbGVZKDEpO1xuICAgIC1tcy10cmFuc2Zvcm06IHNjYWxlWSgxKTtcbiAgICAtby10cmFuc2Zvcm06IHNjYWxlWSgxKTtcbiAgICB0cmFuc2Zvcm06IHNjYWxlWSgxKTtcbiAgICBoZWlnaHQ6IDMwcHg7XG4gICAgb3BhY2l0eTogMTtcbn1cbi8qXG4gICAgc2NhbGUgYW5pbWF0aW9uIC0tLSBlbmRcbiovIl19 */
