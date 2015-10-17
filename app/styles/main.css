@@ -12,17 +12,20 @@ html {
 
 #content {
     margin-top: 71px;
-    margin-bottom: 30px;
 }
 
 .container {
     background: rgba(255, 197, 140, 0.2);
+    margin-bottom: 2em;
+    min-height: 100%;
+    overflow: auto;
 }
 
 .footer {
     position: fixed;
-    height: 30px;
+    height: 2em;
     bottom: 0;
+    left: 0;
     width: 100%;
 }
 

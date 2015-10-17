@@ -12,7 +12,8 @@
     "angular-translate-storage-local": "~2.8.1",
     "angular-loading-bar": "~0.8.0",
     "angular-cookies": "~1.4.7",
-    "angular-resource": "~1.4.7"
+    "angular-resource": "~1.4.7",
+    "restangular": "~1.5.1"
   },
   "devDependencies": {},
   "appPath": "app",

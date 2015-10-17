@@ -2,8 +2,8 @@
     'use strict';
 
     angular.module('app.services')
-        .factory('InterceptorService', ['$q', '$location', 'ConfigService',
-            function ($q, $location, ConfigService) {
+        .factory('InterceptorService', ['$q', '$location', 'Config',
+            function ($q, $location, Config) {
                 return {
                     request: function (config) {
                         return config || $q.when(config);
@@ -18,7 +18,7 @@
                     },
 
                     responseError: function (rejection) {
-                        $location.path(ConfigService.routeForUnauthorizedAccess);
+                        $location.path(Config.routeForUnauthorizedAccess);
 
                         return $q.reject(rejection);
                     }

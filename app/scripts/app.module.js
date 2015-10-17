@@ -8,6 +8,7 @@
         'ui.bootstrap',
         'angular-loading-bar',
         'pascalprecht.translate',
+        'restangular',
         'app.controllers',
         'app.directives',
         'app.services'

@@ -2,17 +2,17 @@
     'use strict';
 
     angular.module('app.services')
-        .factory('MovieService', ['$q', '$http', 'ConfigService', function ($q, $http, ConfigService) {
+        .factory('MovieService', ['$q', '$http', 'Config', function ($q, $http, Config) {
             function getAll() {
                 var callbacks = {
                     success: function (res) {
                         return res.data;
                     },
                     error: function () {
-                        $q.reject('error: ' + ConfigService.server + '/Movies');
+                        $q.reject('error: ' + Config.server + '/Movies');
                     }
                 };
-                return $http.get(ConfigService.server + '/Movies')
+                return $http.get(Config.server + '/Movies')
                     .then(callbacks.success, callbacks.error);
             }
 
@@ -22,10 +22,10 @@
                         return res.data;
                     },
                     error: function () {
-                        $q.reject('error: ' + ConfigService.server + '/Movies/id');
+                        $q.reject('error: ' + Config.server + '/Movies/id');
                     }
                 };
-                return $http.get(ConfigService.server + '/Movies/' + id)
+                return $http.get(Config.server + '/Movies/' + id)
                     .then(callbacks.success, callbacks.error);
             }
 
@@ -35,10 +35,10 @@
                         return res.data;
                     },
                     error: function () {
-                        $q.reject('error: ' + ConfigService.server + '/Movies/id');
+                        $q.reject('error: ' + Config.server + '/Movies/id');
                     }
                 };
-                return $http.delete(ConfigService.server + '/Movies/' + id)
+                return $http.delete(Config.server + '/Movies/' + id)
                     .then(callbacks.success, callbacks.error);
             }
 
@@ -48,10 +48,10 @@
                         return res.data;
                     },
                     error: function () {
-                        $q.reject('error: ' + ConfigService.server + '/Movies/search?title=' + title);
+                        $q.reject('error: ' + Config.server + '/Movies/search?title=' + title);
                     }
                 };
-                return $http.get(ConfigService.server + '/Movies/search?title=' + title)
+                return $http.get(Config.server + '/Movies/search?title=' + title)
                     .then(callbacks.success, callbacks.error);
             }
 
@@ -61,10 +61,10 @@
                         return res.data;
                     },
                     error: function () {
-                        $q.reject('error: ' + ConfigService.server + '/Movies/' + id);
+                        $q.reject('error: ' + Config.server + '/Movies/' + id);
                     }
                 };
-                return $http.post(ConfigService.server + '/Movies/' + id, post)
+                return $http.post(Config.server + '/Movies/' + id, post)
                     .then(callbacks.success, callbacks.error);
             }
 

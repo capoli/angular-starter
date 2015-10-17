@@ -35,6 +35,8 @@ module.exports = function(config) {
       'bower_components/angular-translate-storage-local/angular-translate-storage-local.js',
       'bower_components/angular-loading-bar/build/loading-bar.js',
       'bower_components/angular-resource/angular-resource.js',
+      'bower_components/lodash/lodash.js',
+      'bower_components/restangular/dist/restangular.js',
       // endbower
       "app/scripts/**/*.js",
       "test/mock/**/*.js",

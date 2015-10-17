@@ -2,8 +2,8 @@
     'use strict';
 
     angular.module('app.services')
-        .factory('AuthorizationService', function ($resource, $q, $rootScope, $location, ConfigService) {
-            roles: ConfigService.roles;
+        .factory('AuthorizationService', function ($resource, $q, $rootScope, $location, Config) {
+            roles: Config.roles;
 
             return {
                 // We would cache the permission for the session,
@@ -77,7 +77,7 @@
                     if (!ifPermissionPassed) {
                         //If user does not have required access,
                         //we will route the user to unauthorized access page
-                        $location.path(ConfigService.routeForUnauthorizedAccess);
+                        $location.path(Config.routeForUnauthorizedAccess);
                         //As there could be some delay when location change event happens,
                         //we will keep a watch on $locationChangeSuccess event
                         // and would resolve promise when this event occurs.
