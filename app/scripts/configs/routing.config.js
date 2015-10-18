@@ -8,6 +8,7 @@
 
                 $stateProvider
                     .state('app', {
+                        abstract: true,
                         url: '/app',
                         templateUrl: '../../views/app.html',
                         controller: 'AppCtrl'
@@ -21,6 +22,10 @@
                         url: '/about',
                         templateUrl: '../../views/about.html',
                         controller: 'AboutCtrl'
+                    })
+                    .state('app.error', {
+                        url: '/error',
+                        templateUrl: '../../views/error.html'
                     })
                     .state('app.login', {
                         url: '/login',

@@ -10,6 +10,6 @@
                 admin: 1,
                 user: 2
             },
-            routeForUnauthorizedAccess: '/app/home'
+            routeForUnauthorizedAccess: '/app/error'
         })
 })();

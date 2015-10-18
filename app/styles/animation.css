@@ -64,10 +64,10 @@
 */
 .slidedown {
     position: absolute;
-    top: 71px;
-    left: 12.5%;
-    width: 75%;
-    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 93.5%;
 }
 .slidedown.ng-enter,
 .slidedown.ng-leave {
@@ -78,10 +78,10 @@
     top: -100%;
 }
 .slidedown.ng-enter-active {
-    top: 71px;
+    top: 0;
 }
 .slidedown.ng-leave {
-    top: 71px;
+    top: 0;
 }
 .slidedown.ng-leave-active {
     top: 100%;
