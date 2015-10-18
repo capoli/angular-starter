@@ -40,6 +40,18 @@ module.exports = function (grunt) {
             }
         },
 
+        injector: {
+            ignorePath: {
+                options: {
+                    ignorePath: ['app']
+                },
+                files: {
+                    '<%= yeoman.app %>/index.html': ['<%= yeoman.app %>/styles/{,**/}*.css']
+                }
+            }
+
+        },
+
         // Watches files for changes and runs tasks based on the changed files
         watch: {
             bower: {
@@ -59,7 +71,7 @@ module.exports = function (grunt) {
             },
             styles: {
                 files: ['<%= yeoman.app %>/styles/{,**/}*.css'],
-                tasks: ['newer:copy:styles', 'autoprefixer']
+                tasks: ['newer:copy:styles', 'autoprefixer', 'injector']
             },
             gruntfile: {
                 files: ['Gruntfile.js']
@@ -437,6 +449,7 @@ module.exports = function (grunt) {
             'clean:server',
             'wiredep',
             'angularFileLoader',
+            'injector',
             'concurrent:server',
             'autoprefixer:server',
             'connect:livereload',
