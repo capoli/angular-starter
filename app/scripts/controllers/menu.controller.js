@@ -12,5 +12,9 @@
                 };
 
                 $scope.isCollapsed = true;
+
+                $scope.collapseMenu = function () {
+                    if(!$scope.isCollapsed) $scope.isCollapsed = true;
+                }
             }]);
 })();

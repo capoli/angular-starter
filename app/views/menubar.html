@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" ui-sref="{{menu.home}}" translate="MENUBAR_HOME">
+            <a class="navbar-brand" ui-sref="{{menu.home}}" translate="MENUBAR_HOME" ng-click="collapseMenu()">
             </a>
         </div>
 
@@ -19,9 +19,9 @@
                 <li><a ng-click="changeLang('nl')">nl</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a ui-sref="{{menu.about}}" translate="MENUBAR_ABOUT"></a></li>
-                <li><a ui-sref="{{menu.login}}" translate="MENUBAR_LOGIN"></a></li>
-                <li><a ui-sref="{{menu.register}}" translate="MENUBAR_REGISTER"></a></li>
+                <li><a ui-sref="{{menu.about}}" translate="MENUBAR_ABOUT" ng-click="collapseMenu()"></a></li>
+                <li><a ui-sref="{{menu.login}}" translate="MENUBAR_LOGIN" ng-click="collapseMenu()"></a></li>
+                <li><a ui-sref="{{menu.register}}" translate="MENUBAR_REGISTER" ng-click="collapseMenu()"></a></li>
             </ul>
         </div>
     </div>
