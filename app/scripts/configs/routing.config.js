@@ -9,32 +9,32 @@
                 $stateProvider
                     .state('app', {
                         url: '/app',
-                        templateUrl: 'views/app.html',
+                        templateUrl: '../../views/app.html',
                         controller: 'AppCtrl'
                     })
                     .state('app.home', {
                         url: '/home',
-                        templateUrl: 'views/home.html',
+                        templateUrl: '../../views/home.html',
                         controller: 'HomeCtrl'
                     })
                     .state('app.about', {
                         url: '/about',
-                        templateUrl: 'views/about.html',
+                        templateUrl: '../../views/about.html',
                         controller: 'AboutCtrl'
                     })
                     .state('app.login', {
                         url: '/login',
-                        templateUrl: 'views/login.html',
+                        templateUrl: '../../views/login.html',
                         controller: 'LoginCtrl'
                     })
                     .state('app.register', {
                         url: '/register',
-                        templateUrl: 'views/register.html',
+                        templateUrl: '../../views/register.html',
                         controller: 'RegisterCtrl'
                     })
                     .state('app.user', {
                         url: '/user',
-                        templateUrl: 'views/user.html',
+                        templateUrl: '../../views/user.html',
                         resolve: {
                             permission: function (AuthorizationService, Config) {
                                 return AuthorizationService.permissionCheck([Config.roles.user]);
