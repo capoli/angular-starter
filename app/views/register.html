@@ -1,68 +1,75 @@
 <div class="row">
+    <div class="col-sm-offset-2 col-sm-10 view-heading">
+        <h1 translate="REGISTER_REGISTER"></h1>
+    </div>
     <form name="registerForm" class="form-horizontal" ng-submit="register()">
         <div class="form-group has-success"
              ng-class="{'has-success':registerForm.username.$valid,'has-error':registerForm.username.$invalid}">
-            <label for="username" class="col-sm-2 control-label">Username</label>
+            <label for="username" class="col-sm-2 control-label" translate="REGISTER_USERNAME"></label>
 
             <div class="col-sm-10">
                 <input type="text" name="username" class="form-control"
-                       id="username" ng-model="registerUser.username" placeholder="Enter username" required
+                       id="username" ng-model="registerUser.username" placeholder="{{'REGISTER_USERNAME_PLACEHOLDER' | translate}}" required
                        ng-pattern="/^[A-Za-z]{3}[A-Za-z0-9]{0,12}$/">
             </div>
         </div>
         <div class="form-group has-success"
              ng-class="{'has-success':registerForm.email.$valid,'has-error':registerForm.email.$invalid}">
-            <label for="email" class="col-sm-2 control-label">Email</label>
+            <label for="email" class="col-sm-2 control-label" translate="REGISTER_EMAIL"></label>
 
             <div class="col-sm-10">
                 <input type="email" name="email" class="form-control"
-                       id="email" ng-model="registerUser.email" placeholder="Enter email" required>
+                       id="email" ng-model="registerUser.email" placeholder="{{'REGISTER_EMAIL_PLACEHOLDER' | translate}}" required>
             </div>
         </div>
         <div class="form-group has-success"
              ng-class="{'has-success':registerForm.password.$valid,'has-error':registerForm.password.$invalid}">
-            <label for="password" class="col-sm-2 control-label">Password</label>
+            <label for="password" class="col-sm-2 control-label" translate="REGISTER_PASSWORD"></label>
 
             <div class="col-sm-10">
                 <input type="password" name="password" class="form-control"
-                       id="password" ng-model="registerUser.password" placeholder="Password" required
+                       id="password" ng-model="registerUser.password"
+                       placeholder="{{'REGISTER_PASSWORD_PLACEHOLDER' | translate}}" required
                        ng-pattern="/^[A-Za-z0-9]{6,15}$/">
             </div>
         </div>
         <div class="form-group has-success"
              ng-class="{'has-success':registerForm.passwordConfirm.$valid,'has-error':registerForm.passwordConfirm.$invalid || isMatchingPassword}">
-            <label for="passwordConfirm" class="col-sm-2 control-label">Password confirmation</label>
+            <label for="passwordConfirm" class="col-sm-2 control-label" translate="REGISTER_PASSWORD_CONFIRMATION"></label>
 
             <div class="col-sm-10">
                 <input type="password" name="passwordConfirm" class="form-control"
-                       id="passwordConfirm" ng-model="registerUser.passwordConfirm" placeholder="Confirm password"
+                       id="passwordConfirm" ng-model="registerUser.passwordConfirm"
+                       placeholder="{{'REGISTER_PASSWORD_CONFIRMATION_PLACEHOLDER' | translate}}"
                        required ng-change="checkPasswordsMatching()">
             </div>
         </div>
         <div class="form-group has-success"
              ng-class="{'has-success':registerForm.dateOfBirth.$valid,'has-error':registerForm.dateOfBirth.$invalid}">
-            <label for="dateOfBirth" class="col-sm-2 control-label">Date of birth</label>
+            <label for="dateOfBirth" class="col-sm-2 control-label" translate="REGISTER_DATE_OF_BIRTH"></label>
 
             <div class="col-sm-10">
                 <input type="text" name="dayOfBirth" class="form-control"
-                       id="dateOfBirth" ng-model="registerUser.dateOfBirth" placeholder="dd/mm/yyyy" required>
+                       id="dateOfBirth" ng-model="registerUser.dateOfBirth" placeholder="{{'REGISTER_DATE_OF_BIRTH_PLACEHOLDER' | translate}}" required>
             </div>
         </div>
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
                 <label class="radio-inline">
                     <input type="radio" name="inlineRadioOptions" id="inlineRadio1" ng-model="registerUser.gender"
-                           value="male" ng-checked="true" required> Male
+                           value="male" ng-checked="true" required>
+                    {{'REGISTER_MALE' | translate}}
                 </label>
                 <label class="radio-inline">
                     <input type="radio" name="inlineRadioOptions" id="inlineRadio2" ng-model="registerUser.gender"
-                           value="female" required> Female
+                           value="female" required>
+                    {{'REGISTER_FEMALE' | translate}}
                 </label>
             </div>
         </div>
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-primary" value="register" id="submit">Register</button>
+                <button type="submit" class="btn btn-primary" value="register" id="submit" translate="REGISTER_REGISTER"></button>
             </div>
         </div>
 

@@ -50,13 +50,14 @@ html {
     margin-left: auto;
 }
 
-.fade-tag{ /* For Safari 3.1 to 6.0 */
+.fade-tag { /* For Safari 3.1 to 6.0 */
     transition: opacity 2s;
     opacity: 0;
 }
 
-.horizontal-line {
-    border-bottom: 1px black solid;
+.view-heading {
+    margin-bottom: 2em;
+    padding-left: 3px;
 }
 
 @media (min-width: 768px) {
