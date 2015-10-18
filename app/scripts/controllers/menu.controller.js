@@ -12,5 +12,5 @@
                 };
 
                 $scope.isCollapsed = true;
-            }])
+            }]);
 })();

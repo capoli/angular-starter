@@ -59,6 +59,10 @@ html {
     opacity: 0;
 }
 
+.horizontal-line {
+    border-bottom: 1px black solid;
+}
+
 @media (min-width: 768px) {
     #content {
         top: 71px;

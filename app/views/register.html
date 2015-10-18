@@ -1,48 +1,70 @@
 <div class="row">
-    <form name="registerForm" ng-submit="register()">
+    <form name="registerForm" class="form-horizontal" ng-submit="register()">
         <div class="form-group has-success"
              ng-class="{'has-success':registerForm.username.$valid,'has-error':registerForm.username.$invalid}">
-            <label for="username">Username</label>
-            <input type="text" name="username" class="form-control"
-                   id="username" ng-model="registerUser.username" placeholder="Enter username" required
-                   ng-pattern="/^[A-Za-z]{3}[A-Za-z0-9]{0,12}$/">
+            <label for="username" class="col-sm-2 control-label">Username</label>
+
+            <div class="col-sm-10">
+                <input type="text" name="username" class="form-control"
+                       id="username" ng-model="registerUser.username" placeholder="Enter username" required
+                       ng-pattern="/^[A-Za-z]{3}[A-Za-z0-9]{0,12}$/">
+            </div>
         </div>
         <div class="form-group has-success"
              ng-class="{'has-success':registerForm.email.$valid,'has-error':registerForm.email.$invalid}">
-            <label for="email">Email</label>
-            <input type="email" name="email" class="form-control"
-                   id="email" ng-model="registerUser.email" placeholder="Enter email" required>
+            <label for="email" class="col-sm-2 control-label">Email</label>
+
+            <div class="col-sm-10">
+                <input type="email" name="email" class="form-control"
+                       id="email" ng-model="registerUser.email" placeholder="Enter email" required>
+            </div>
         </div>
         <div class="form-group has-success"
              ng-class="{'has-success':registerForm.password.$valid,'has-error':registerForm.password.$invalid}">
-            <label for="password">Password</label>
-            <input type="password" name="password" class="form-control"
-                   id="password" ng-model="registerUser.password" placeholder="Password" required
-                   ng-pattern="/^[A-Za-z0-9]{6,15}$/">
+            <label for="password" class="col-sm-2 control-label">Password</label>
+
+            <div class="col-sm-10">
+                <input type="password" name="password" class="form-control"
+                       id="password" ng-model="registerUser.password" placeholder="Password" required
+                       ng-pattern="/^[A-Za-z0-9]{6,15}$/">
+            </div>
         </div>
         <div class="form-group has-success"
              ng-class="{'has-success':registerForm.passwordConfirm.$valid,'has-error':registerForm.passwordConfirm.$invalid || isMatchingPassword}">
-            <label for="passwordConfirm">Password confirmation</label>
-            <input type="password" name="passwordConfirm" class="form-control"
-                   id="passwordConfirm" ng-model="registerUser.passwordConfirm" placeholder="Confirm password"
-                   required ng-change="checkPasswordsMatching()">
+            <label for="passwordConfirm" class="col-sm-2 control-label">Password confirmation</label>
+
+            <div class="col-sm-10">
+                <input type="password" name="passwordConfirm" class="form-control"
+                       id="passwordConfirm" ng-model="registerUser.passwordConfirm" placeholder="Confirm password"
+                       required ng-change="checkPasswordsMatching()">
+            </div>
         </div>
         <div class="form-group has-success"
              ng-class="{'has-success':registerForm.dateOfBirth.$valid,'has-error':registerForm.dateOfBirth.$invalid}">
-            <label for="dateOfBirth">Date of birth (dd/mm/yyyy)</label>
-            <input type="text" name="dayOfBirth" class="form-control"
-                   id="dateOfBirth" ng-model="registerUser.dateOfBirth" placeholder="dd/mm/yyyy" required>
+            <label for="dateOfBirth" class="col-sm-2 control-label">Date of birth</label>
+
+            <div class="col-sm-10">
+                <input type="text" name="dayOfBirth" class="form-control"
+                       id="dateOfBirth" ng-model="registerUser.dateOfBirth" placeholder="dd/mm/yyyy" required>
+            </div>
         </div>
         <div class="form-group">
-            <label class="radio-inline">
-                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" ng-model="registerUser.gender"
-                       value="male" ng-checked="true" required> Male
-            </label>
-            <label class="radio-inline">
-                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" ng-model="registerUser.gender"
-                       value="female" required> Female
-            </label>
+            <div class="col-sm-offset-2 col-sm-10">
+                <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" ng-model="registerUser.gender"
+                           value="male" ng-checked="true" required> Male
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" ng-model="registerUser.gender"
+                           value="female" required> Female
+                </label>
+            </div>
         </div>
-        <button type="submit" class="btn btn-primary" value="register" id="submit">Register</button>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary" value="register" id="submit">Register</button>
+            </div>
+        </div>
+
     </form>
 </div>
