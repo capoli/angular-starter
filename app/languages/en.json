@@ -3,6 +3,7 @@
   "MENUBAR_ABOUT": "About",
   "MENUBAR_LOGIN": "Login",
   "MENUBAR_REGISTER": "Register",
+  "MENUBAR_LOGOUT": "Logout",
   "HOME_WELCOME": "Welcome to this template",
   "ABOUT_TITLE":"About",
   "ERROR_TEXT":"An error occured",

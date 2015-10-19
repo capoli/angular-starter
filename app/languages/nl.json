@@ -3,6 +3,7 @@
   "MENUBAR_ABOUT": "Over",
   "MENUBAR_LOGIN": "Login",
   "MENUBAR_REGISTER": "Registreer",
+  "MENUBAR_LOGOUT": "Log uit",
   "HOME_WELCOME": "Welkom op deze template",
   "ABOUT_TITLE":"Over",
   "ERROR_TEXT":"Er is een fout opgetreden",
