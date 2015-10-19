@@ -5,7 +5,6 @@
     <uib-alert id="alert-container"
                ng-repeat="alert in alerts"
                type="{{alert.type}}"
-               close="closeAlert($index)"
                ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}">{{alert.msg}}
     </uib-alert>
     <div class="fade container" ui-view>

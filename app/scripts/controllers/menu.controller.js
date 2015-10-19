@@ -2,8 +2,8 @@
     'use strict';
 
     angular.module('app.controllers')
-        .controller('MenuCtrl', ['$scope', '$state', 'UserService',
-            function ($scope, $state, UserService) {
+        .controller('MenuCtrl', ['$scope', '$state', 'AuthorizationService', 'UserService',
+            function ($scope, $state, AuthorizationService, UserService) {
                 $scope.menu = {
                     about: 'app.about',
                     home: 'app.home',
@@ -19,6 +19,7 @@
                 };
 
                 $scope.user = UserService.user;
+                $scope.permissionModel = AuthorizationService.permissionModel;
 
                 $scope.logout = function () {
                     UserService.logout().then(function () {

@@ -6,10 +6,6 @@
             function ($scope, $state, $interval, $rootScope, Config) {
                 $scope.alerts = [];
 
-                $scope.closeAlert = function (index) {
-                    $scope.alerts.splice(index, 1);
-                };
-
                 $scope.deleteLastMessageAfterDelay = function () {
                     $interval(
                         function () {
