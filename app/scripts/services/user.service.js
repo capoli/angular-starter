@@ -5,6 +5,14 @@
         .factory('UserService', ['Restangular',
             function (Restangular) {
                 //simple restangular method
-                return Restangular.service('users');
+                //Restangular.service('users')
+                return {
+                    user: {
+                        isLoggedIn: false
+                    },
+                    login: function() {
+                        this.user.isLoggedIn = true;
+                    }
+                };
         }]);
 })();
