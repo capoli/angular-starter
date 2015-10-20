@@ -5,7 +5,6 @@
         .controller('TranslateCtrl', ['$scope', '$translate', '$rootScope',
             function ($scope, $translate, $rootScope) {
                 $scope.changeLang = function (key) {
-                    console.log(key);
                     $translate.use(key);
                 };
                 $scope.fbUse = function (key) {

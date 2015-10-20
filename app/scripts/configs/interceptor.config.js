@@ -4,6 +4,6 @@
     angular.module('app')
         .config(['$httpProvider',
             function ($httpProvider) {
-                $httpProvider.interceptors.push('InterceptorService');
+                $httpProvider.interceptors.push('InterceptorFactory');
             }]);
 })();

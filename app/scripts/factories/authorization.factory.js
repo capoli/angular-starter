@@ -1,8 +1,8 @@
 (function () {
     'use strict';
 
-    angular.module('app.services')
-        .factory('AuthorizationService', function ($resource, $q, $rootScope, $location, Config) {
+    angular.module('app.factories')
+        .factory('AuthorizationFactory', function ($resource, $q, $rootScope, $location, Config) {
             roles: Config.roles;
 
             return {

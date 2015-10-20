@@ -1,8 +1,8 @@
 (function () {
     'use strict';
 
-    angular.module('app.services')
-        .factory('UserService', ['$q',
+    angular.module('app.factories')
+        .factory('UserFactory', ['$q',
             function ($q) {
                 //simple restangular method
                 //Restangular.service('users')

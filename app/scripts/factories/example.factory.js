@@ -1,8 +1,8 @@
 (function () {
     'use strict';
 
-    angular.module('app.services')
-        .factory('MovieService', ['$q', '$http', 'Config', function ($q, $http, Config) {
+    angular.module('app.factories')
+        .factory('MovieFactory', ['$q', '$http', 'Config', function ($q, $http, Config) {
             function getAll() {
                 var callbacks = {
                     success: function (res) {

@@ -1,8 +1,8 @@
 (function () {
     'use strict';
 
-    angular.module('app.services')
-        .factory('InterceptorService', ['$q', '$location', 'Config',
+    angular.module('app.factories')
+        .factory('InterceptorFactory', ['$q', '$location', 'Config',
             function ($q, $location, Config) {
                 return {
                     request: function (config) {

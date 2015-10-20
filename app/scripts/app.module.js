@@ -11,6 +11,6 @@
         'restangular',
         'app.controllers',
         'app.directives',
-        'app.services'
+        'app.factories'
     ]);
 })();
