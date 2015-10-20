@@ -2,17 +2,30 @@
     'use strict';
 
     angular.module('app.services')
-        .factory('UserService', ['Restangular',
-            function (Restangular) {
+        .factory('UserService', ['$q',
+            function ($q) {
                 //simple restangular method
                 //Restangular.service('users')
                 return {
                     user: {
                         isLoggedIn: false
                     },
-                    login: function() {
-                        this.user.isLoggedIn = true;
+                    login: function () {
+                        var deferred = $q.defer();
+                        (function () {
+                            this.user.isLoggedIn = true;
+                            deferred.resolve();
+                        }.bind(this))();
+                        return deferred.promise;
+                    },
+                    logout: function () {
+                        var deferred = $q.defer();
+                        (function () {
+                            this.user.isLoggedIn = false;
+                            deferred.resolve();
+                        }.bind(this))();
+                        return deferred.promise;
                     }
                 };
-        }]);
+            }]);
 })();

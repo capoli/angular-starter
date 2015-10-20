@@ -2,17 +2,18 @@
     'use strict';
 
     angular.module('app.controllers')
-        .controller('LoginCtrl', ['$scope', '$state',
-            function ($scope, $state) {
+        .controller('LoginCtrl', ['$scope', '$state', 'UserService',
+            function ($scope, $state, UserService) {
                 $scope.loginUser = {email: '', password: ''};
 
                 $scope.login = function () {
-                    console.log($scope.loginUser);
-                    $scope.alerts.push(
-                        {type:'success', msg:'login success!'}
-                    );
-                    $scope.deleteLastMessageAfterDelay();
-                    $state.go('app.home');
+                    UserService.login().then(function () {
+                        $scope.alerts.push(
+                            {type: 'success', msg: 'login success!'}
+                        );
+                        $scope.deleteLastMessageAfterDelay();
+                        $state.go('app.home');
+                    });
                 };
             }]);
 })();
